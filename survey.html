@@ -24,10 +24,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"> <img src= "./prep-images/Logo.jpg"/></a>
+      <a class="navbar-brand"> <img src= "./prep-images/Logo.jpg" width="100%"/></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" id="nav_nav">
         <li><a href="./index.html">ABOUT PROMOTION</a></li>
         <li><a href="./survey.html">SURVEY</a></li>
         <li><a href="./exhibitions.html">EXHIBITION SCHEDULE</a></li>
@@ -60,6 +60,41 @@
     </p>
   </footer>
 
+  <script>
+
+   var adjustNav = function(){
+     if($(window).width() < 1200){
+       //console.log("md breakpoint");
+       $('#nav_nav').removeClass("navbar-right");
+       $('#nav_nav').addClass("navbar-left");
+       $('#nav_nav').css({"margin-top":"30px","font-size":"12px"});
+     }
+     else{
+       //console.log("large breakpoint");
+       $('#nav_nav').removeClass("navbar-left");
+       $('#nav_nav').addClass("navbar-right");
+       $('#nav_nav').css({"margin-top":"40px","font-size":"15px"});
+     }
+   }
+
+   $(window).resize(function(){
+     adjustNav();
+   });
+
+   adjustNav();
+
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76675431-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 
 </body>
 </html>
